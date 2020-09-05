@@ -18,7 +18,13 @@ _          _ _ _
  ## How it Works?
 It runs any command what do you type at Browser!
 
- ## Configuring
+ ## Setup
+```
+git clone https://github.com/yonle/shellbrowser.git
+cd shellbrowser
+npm i
+```
+## Configuring
 Follow any of Required things at `config.example.json` File, Or Fill out this column:
 ```js
 {
@@ -28,7 +34,8 @@ Follow any of Required things at `config.example.json` File, Or Fill out this co
 \n\n
 Password is Uses for make your Project cannot executed by someone.
 Keep that mind if Password must Private!
-
+\n\n
+If you done, Type `npm start` And Try it!
 ## Credit:
 
 All is belongs to @Yonle or @yDevs who Creating this app very well.
