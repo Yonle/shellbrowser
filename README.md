@@ -31,10 +31,10 @@ Follow any of Required things at `config.example.json` File, Or Fill out this co
  "PASSWORD": "<password-here>"
 }
 ```
-\n\n
+
 Password is Uses for make your Project cannot executed by someone.
 Keep that mind if Password must Private!
-\n\n
+
 If you done, Type `npm start` And Try it!
 ## Credit:
 
