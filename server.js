@@ -5,7 +5,7 @@
 const express = require('express');
 const app = express();
 const fs = require("fs");
-
+const config = require("./config.json");
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
 
@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
 app.get('/shell', function(request, response) {
     var sh = request.query["sh"]
     var pass = request.query["pass"]
-    if (pass !== "shell7713") return response.send("<script>alert('Incorrect Password');</script>");
+    if (pass !== config.PASSWORD) return response.send("<script>alert('Incorrect Password');</script>");
     if (sh != undefined) {
         const {
             exec
@@ -43,34 +43,17 @@ app.get('/shell', function(request, response) {
         });
     }
 });
-/*
-function addUrl(url)
-{
-  return new Promise((res, rej) => {
-    fs.readFile(".data/urls.json", "utf8", function(err, contents) {
-      var j = JSON.parse(contents);
-      if (j.indexOf(url) > -1) {
-        rej("URL_IN_DB");
-      } else {
-         j.push(url); 
-      }
-      fs.writeFile(".data/urls.json", JSON.stringify(j), 'utf8', () => {
-        res();
-      });
-    });
-  });
-}
-*/
+
 // listen for requests :)
-const listener = app.listen(7000)
+const listener = app.listen(3000)
 
 function intro() {
     let date = new Date()
     let ascii = fs.readFileSync("ascii.txt", 'utf8');
     console.clear();
     console.log(`\n\n\n\n\n\n\n\n\n\n${date}\n${ascii}`);
-    console.log("                        shellbrowser v0.4");
-    console.log("\n\n                   Now listening at Port 7000\n                      http://127.0.0.1:7000");
+    console.log("                        shellbrowser v0.1");
+    console.log("\n\n                   Now listening at Port 3000\n                      http://127.0.0.1:3000");
     console.log("\n\n\n\n\n®Yonle Production Inc.");
 }
 setInterval(function() {
