@@ -19,9 +19,11 @@ _          _ _ _
 It runs any command what do you type at Browser!
 
  ## Configuring
-Insert any of Required things at `.env` File, Or Fill out this column:
+Follow any of Required things at `config.example.json` File, Or Fill out this column:
 ```js
-PASSWORD=
+{
+ "PASSWORD": "<password-here>"
+}
 ```
 \n\n
 Password is Uses for make your Project cannot executed by someone.
