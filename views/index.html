@@ -1,0 +1,55 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>🖥ShellBrowser</title>
+    <meta name="description" content="Run some Shell in Browser">
+    <link id="favicon" rel="icon" href="/icon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css">
+    
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        🖥ShellBrowser
+      </h1>
+    </header>
+
+    <main>
+      
+      
+      <p>Insert The Shell for the output.</p>
+      
+      <form action="/shell" onsubmit="return(validate());">
+        <input name="sh" type="text" maxlength="100" id="input_url" placeholder="echo Hello World :O" aria-labelledby="submit-dream" required>
+        <input name="pass" type="password" maxlength="100" id="input_url" placeholder="Password" aria-labelledby="submit-dream" required>        
+        <button type="submit" id="submit-dream">Go!</button>
+      </form>
+      
+      <section class="dreams">
+        <ul id="dreams"></ul>
+      </section>
+    </main>
+<p><b>NOTE:</b>Only administrator can Do this..</p>
+    <footer>
+      Made by @yonle
+    </footer>
+
+    
+  </body>
+</html>
